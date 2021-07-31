@@ -4,8 +4,9 @@
 # I [jjb] added this to ignore emacs autosaves
 *~
 
-# bin ÆÄÀÏ ÀÌÇÏ ÀüºÎ ignore
+# bin íŒŒì¼ ì•„ë˜ë¥¼ ì „ë¶€ ignore í•©ë‹ˆë‹¤.
 bin/../*.class
+bin
 
 # User-specific stuff
 # .idea/**/workspace.xml
@@ -66,3 +67,7 @@ fabric.properties
 
 # Editor-based Rest Client
 # .idea/httpRequests
+
+# eclipse project properties
+/.classpath
+/.project
