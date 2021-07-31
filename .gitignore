@@ -4,6 +4,9 @@
 # I [jjb] added this to ignore emacs autosaves
 *~
 
+# bin 파일 이하 전부 ignore
+bin/../*.class
+
 # User-specific stuff
 # .idea/**/workspace.xml
 # .idea/**/tasks.xml

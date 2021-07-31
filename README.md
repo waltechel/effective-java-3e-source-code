@@ -1,3 +1,14 @@
+
+---
+
+## 현재 이 저장소는 이복연 님의 『이펙티브 자바 3판』 저장소를 fork 한 곳입니다.
+
+* 저는 책의 내용을 일부 정리하고 소스 코드에 책의 내용을 반영하는 작업을 하고 있습니다.
+* 책의 번역자이신 이복연 님 혹은 출판사 인사이트 에서 해당 내용을 내려 달라고 요청하실 시에는 내려 드릴 것임을 여기에 적어둡니다.
+* 아래는 이복연 님께서 만들어두신 readme 파일 입니다.
+
+---
+
 # 『이펙티브 자바 3판』(원서: Effective Java 3rd Edition)
 
 <img src="https://github.com/WegraLee/effective-java-3e-source-code/blob/master/EJ3.jpg" width="640">
