@@ -59,6 +59,9 @@ public class NutritionFacts {
 		carbohydrate = builder.carbohydrate;
 	}
 
+	/*
+	 * bad example
+	 */
 	public NutritionFacts(int servingSize, int servings, int calories, int fat, int sodium, int carbohydrate) {
 		this.servingSize = servingSize;
 		this.servings = servings;

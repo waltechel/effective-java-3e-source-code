@@ -45,10 +45,11 @@ public class NutritionFacts {
 		// 객체 하나를 만들려면 메서드를 여러 개 호출하여야 한다.
 		// 객체가 완전히 생성되기 전까지는 일관성이 없는 상태
 		NutritionFacts cocaCola = new NutritionFacts();
-		cocaCola.setServingSize(240);
 		cocaCola.setServings(8);
-		cocaCola.setCalories(100);
+		cocaCola.setCalories(100);		
 		cocaCola.setSodium(35);
 		cocaCola.setCarbohydrate(27);
+		// 
+		cocaCola.setServingSize(240);
 	}
 }

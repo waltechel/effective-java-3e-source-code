@@ -16,14 +16,19 @@ public final class PhoneNumber {
         return (short) val;
     }
 
-    @Override public boolean equals(Object o) {
-        if (o == this)
-            return true;
-        if (!(o instanceof PhoneNumber))
-            return false;
-        PhoneNumber pn = (PhoneNumber)o;
-        return pn.lineNum == lineNum && pn.prefix == prefix
-                && pn.areaCode == areaCode;
+    @Override
+    public boolean equals(Object o) {
+    	if (o == this){
+    		return true;
+    	}
+    	if (o == null){
+    		return false;
+    	}
+    	if (!(o instanceof PhoneNumber)){
+    		return false;
+    	}
+    	PhoneNumber pn = (PhoneNumber) o;
+    	return pn.lineNum == lineNum && pn.prefix == prefix	&& pn.areaCode == areaCode;
     }
 
     // 나머지 코드는 생략 - hashCode 메서드는 꼭 필요하다(아이템 11)!

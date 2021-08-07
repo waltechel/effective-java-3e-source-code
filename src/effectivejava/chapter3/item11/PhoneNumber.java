@@ -1,5 +1,6 @@
 package effectivejava.chapter3.item11;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 // equals를 재정의하면 hashCode로 재정의해야 함을 보여준다. (70-71쪽)
 public final class PhoneNumber {
@@ -47,14 +48,13 @@ public final class PhoneNumber {
 //    private int hashCode; // 자동으로 0으로 초기화된다.
 //
 //    @Override public int hashCode() {
-//        int result = hashCode;
-//        if (result == 0) {
-//            result = Short.hashCode(areaCode);
-//            result = 31 * result + Short.hashCode(prefix);
-//            result = 31 * result + Short.hashCode(lineNum);
-//            hashCode = result;
-//        }
-//        return result;
+//    	if (hashCode != 0){
+//    		return hashCode;
+//    	}
+//    	int result = Short.hashCode(areaCode);
+//    	result = 31 * result + Short.hashCode(prefix);
+//    	result = 31 * result + Short.hashCode(lineNum);
+//    	return hashCode = result;
 //    }
 
     public static void main(String[] args) {
