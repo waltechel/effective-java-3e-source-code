@@ -26,7 +26,7 @@
 ---
 ## 대칭성symmetry을 위배한 코드
 ```java
-// 일반 Point를 ColorPoint와 비교했으 때의 결과가 다를 수 있다.
+// 일반 Point를 ColorPoint와 비교했을 때의 결과가 다를 수 있다.
 // Point.equals(ColorPoint) is true
 // ColorPoint.equals(Point) is true?
 @Override public boolean equals(Object o) {

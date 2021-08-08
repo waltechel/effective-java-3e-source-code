@@ -48,7 +48,7 @@ private int hashCode; // 자동으로 0으로 초기화된다.
 	}
 	int result = Short.hashCode(areaCode);
 	// 31은 소수 이므로
-	result = 31 * result + Short.hashCode(prefix);
+	result = (result << 5 - 1) + Short.hashCode(prefix);
 	result = 31 * result + Short.hashCode(lineNum);
 	return hashCode = result;
 }
