@@ -1,5 +1,8 @@
 package effectivejava.chapter4.item20;
-import java.util.*;
+import java.util.AbstractList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
 
 // 코드 20-1 골격 구현을 사용해 완성한 구체 클래스 (133쪽)
 public class IntArrays {
