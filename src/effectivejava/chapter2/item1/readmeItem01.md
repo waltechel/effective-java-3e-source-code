@@ -8,7 +8,9 @@
 1. 이름을 가질 수 있다.
 	- 생성자는 클래스명으로 통일되는데 이름을 따로 지정할 수 있다.
 2. 호출될 때마다 인스턴스를 새로 생성하지는 않아도 된다.
-  - 생성자를 쓰게 되면 무조건 객체를 생성하는 반면, 정적 팩토리 메서드를 사용하게 되면 '캐싱' 기법을 사용하여 기존에 있는 인스턴스를 리턴할 수도 있다.
+  - 생성자를 쓰게 되면 무조건 객체를 생성하는 반면,
+	정적 팩토리 메서드를 사용하게 되면 '캐싱' 기법을 사용하여 기존에 있는 인스턴스를 리턴할 수도 있다.
+	불필요한 객체 생성을 피할 수 있다.
 3. 반환 타입의 하위 타입 객체를 반환할 수 있는 능력이 있다.
 4. 입력 매개변수에 따라 매번 다른 클래스의 객체를 반환할 수 있다.
 5. 정적 팩토리 메서드를 작성하는 시점에는 반환할 객체의 클래스가 존재하지 않아도 된다.
@@ -35,6 +37,7 @@ BigInteger intMax = BigInteger.valueOf(Integer.MAX_VALUE);
 StackWalker walker = StackWalker.getInstance(options);
 
 // newInstance
+// 매번 새로운 인스턴스를 생성해 반환함을 보장한다.
 Object newArray = Array.newInstance(classObject, lengthOfArray);
 
 // getType(Type : 객체의 타입)

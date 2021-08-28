@@ -1,5 +1,5 @@
 package effectivejava.chapter2.item7;
-import java.util.*;
+import java.util.Arrays;
 
 // 코드 7-1 메모리 누수가 일어나는 위치는 어디인가? (36쪽)
 public class Stack {
@@ -16,12 +16,7 @@ public class Stack {
         elements[size++] = e;
     }
 
-    public Object pop() {
-        if (size == 0)
-            throw new EmptyStackException();
-        return elements[--size];
-    }
-
+    
     /**
      * 원소를 위한 공간을 적어도 하나 이상 확보한다.
      * 배열 크기를 늘려야 할 때마다 대략 두 배씩 늘린다.
@@ -32,14 +27,22 @@ public class Stack {
     }
 
 //    // 코드 7-2 제대로 구현한 pop 메서드 (37쪽)
-//    public Object pop() {
-//        if (size == 0)
-//            throw new EmptyStackException();
-//        Object result = elements[--size];
-//        elements[size] = null; // 다 쓴 참조 해제
-//        return result;
-//    }
+    public Object pop() {
+        if (size == 0)
+            throw new EmptyStackException();
+        Object result = elements[--size];
+        elements[size] = null; // 다 쓴 참조 해제
+        return result;
+    }
 
+    // 다 쓴 참조가 여전히 남게 된다. 
+    public Object badpop() {
+        if (size == 0)
+            throw new EmptyStackException();
+        return elements[--size];
+    }
+
+    
     public static void main(String[] args) {
         Stack stack = new Stack();
         for (String arg : args)

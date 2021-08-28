@@ -1,7 +1,5 @@
 package effectivejava.chapter2.item6;
 
-import java.util.Comparator;
-
 // 코드 6-3 끔찍이 느리다! 객체가 만들어지는 위치를 찾았는가? (34쪽)
 public class Sum {
     private static long sum() {
@@ -12,7 +10,7 @@ public class Sum {
     }
 
     public static void main(String[] args) {
-        int numSets = Integer.parseInt(args[0]);
+        int numSets = 10;
         long x = 0;
 
         for (int i = 0; i < numSets; i++) {
