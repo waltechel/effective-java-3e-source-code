@@ -14,7 +14,7 @@ public class Text {
 
     // 사용 예
     public static void main(String[] args) {
-        Text text = new Text();
+    	Text text = new Text();
         text.applyStyles(EnumSet.of(Style.BOLD, Style.ITALIC));
     }
 }
