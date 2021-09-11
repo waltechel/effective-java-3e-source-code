@@ -1,0 +1,25 @@
+---
+theme: default
+_class: lead
+paginate: true
+color : black
+backgroundColor: #EEEEEE
+marp: true
+font-size : 14
+
+---
+<style>
+.section{
+font-family: 'D2Coding', serif !important;
+}
+</style>
+
+# 아이템 13. clone 재정의는 주의해서 진행하라.
+
+---
+## toString()을 잘 구현한 클래스는 사용하기에 훨씬 즐겁고, 그 클래스를 사용한 시스템은 디버깅하기 쉽다.
+
+
+---
+## 핵심 정리
+- 모든 구체 클래스에서 Object의 toString을 재정의하자.
