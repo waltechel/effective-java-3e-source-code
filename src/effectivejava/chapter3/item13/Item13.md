@@ -1,19 +1,4 @@
 ---
-theme: default
-_class: lead
-paginate: true
-color : black
-backgroundColor: #EEEEEE
-marp: true
-font-size : 14
-
----
-<style>
-.section{
-font-family: 'D2Coding', serif !important;
-}
-</style>
-
 # 아이템 13. clone 재정의는 주의해서 진행하라.
 
 ---

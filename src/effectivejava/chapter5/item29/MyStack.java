@@ -5,7 +5,7 @@ import java.util.Arrays;
 class MyStack<E> {
 
 	private E[] elements;
-	private int top = 0;
+	private int top = 0; // size
 	private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
 	public MyStack(E[] elements, int top) {

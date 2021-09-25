@@ -1,49 +1,54 @@
 package effectivejava.chapter7.item45;
 
+import static java.util.stream.Collectors.toList;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
-import static java.util.stream.Collectors.*;
 
 // 반복 방식과 스트림 방식으로 두 리스트의 데카르트 곱을 생성한다. (275-276쪽)
 public class Card {
-    public enum Suit { SPADE, HEART, DIAMOND, CLUB }
-    public enum Rank { ACE, DEUCE, THREE, FOUR, FIVE, SIX, SEVEN,
-                       EIGHT, NINE, TEN, JACK, QUEEN, KING }
+	public enum Suit {
+		SPADE, HEART, DIAMOND, CLUB
+	}
 
-    private final Suit suit;
-    private final Rank rank;
+	public enum Rank {
+		ACE, DEUCE, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
+	}
 
-    @Override public String toString() {
-        return rank + " of " + suit + "S";
-    }
+	private final Suit suit;
+	private final Rank rank;
 
-    public Card(Suit suit, Rank rank) {
-        this.suit = suit;
-        this.rank = rank;
+	@Override
+	public String toString() {
+		return rank + " of " + suit + "S";
+	}
 
-    }
-    private static final List<Card> NEW_DECK = newDeck();
+	public Card(Suit suit, Rank rank) {
+		this.suit = suit;
+		this.rank = rank;
 
-    // 코드 45-4 데카르트 곱 계산을 반복 방식으로 구현 (275쪽)
-    private static List<Card> newDeck() {
-        List<Card> result = new ArrayList<>();
-        for (Suit suit : Suit.values())
-            for (Rank rank : Rank.values())
-                result.add(new Card(suit, rank));
-        return result;
-    }
+	}
 
-//    // 코드 45-5 데카르트 곱 계산을 스트림 방식으로 구현 (276쪽)
-//    private static List<Card> newDeck() {
-//        return Stream.of(Suit.values())
-//                .flatMap(suit ->
-//                        Stream.of(Rank.values())
-//                                .map(rank -> new Card(suit, rank)))
-//                .collect(toList());
-//    }
+	private static final List<Card> NEW_DECK = newDeckStream();
 
-    public static void main(String[] args) {
-        System.out.println(NEW_DECK);
-    }
+	// 코드 45-4 데카르트 곱 계산을 반복 방식으로 구현 (275쪽)
+	private static List<Card> newDeckIterative() {
+		List<Card> result = new ArrayList<>();
+		for (Suit suit : Suit.values())
+			for (Rank rank : Rank.values())
+				result.add(new Card(suit, rank));
+		return result;
+	}
+
+	// // 코드 45-5 데카르트 곱 계산을 스트림 방식으로 구현 (276쪽)
+	private static List<Card> newDeckStream() {
+		return Stream.of(Suit.values()).flatMap(suit -> Stream.of(Rank.values()).map(rank -> new Card(suit, rank))).collect(toList());
+	}
+
+	public static void main(String[] args) {
+		// 데카르트 곱 = Cartesian product와 동의어
+		// 모든 경우의 수
+		System.out.println(NEW_DECK);
+	}
 }

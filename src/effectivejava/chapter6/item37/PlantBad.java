@@ -1,8 +1,7 @@
 package effectivejava.chapter6.item37;
 
-import java.util.*;
-import static java.util.stream.Collectors.groupingBy;
-import static java.util.stream.Collectors.toSet;
+import java.util.HashSet;
+import java.util.Set;
 
 // EnumMap을 사용해 열거 타입에 데이터를 연관시키기 (226-228쪽)
 
@@ -29,7 +28,8 @@ class PlantBad {
 	}
 
 	public static void main(String[] args) {
-		PlantBad[] garden = { new PlantBad("바질", LifeCycle.ANNUAL), new PlantBad("캐러웨이", LifeCycle.BIENNIAL),
+		PlantBad[] garden = { 
+				new PlantBad("바질", LifeCycle.ANNUAL), new PlantBad("캐러웨이", LifeCycle.BIENNIAL),
 				new PlantBad("딜", LifeCycle.ANNUAL), new PlantBad("라벤더", LifeCycle.PERENNIAL),
 				new PlantBad("파슬리", LifeCycle.BIENNIAL), new PlantBad("로즈마리", LifeCycle.PERENNIAL) };
 
